@@ -1,3 +1,4 @@
+﻿
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -17,82 +18,89 @@
 </head>
 
 <body>
-
-<div id="mainDiv">
-	<div id="content">
-		<div id="code">
-			<span class="comments">/**</span><br />
-			<span class="space"/><span class="comments">*2013��02-14,</span><br />
-			<span class="space"/><span class="comments">*2013-02-28.</span><br />
-			<span class="space"/><span class="comments">*/</span><br />
-			Boy name = <span class="keyword">Mr</span> LI<br />
-			Girl name = <span class="keyword">Mrs</span> ZHANG<br />
-			<span class="comments">// Fall in love river. </span><br />
-			The boy love the girl;<br />
-			<span class="comments">// They love each other.</span><br />
-			The girl loved the boy;<br />
-			<span class="comments">// AS time goes on.</span><br />
-			The boy can not be separated the girl;<br />
-			<span class="comments">// At the same time.</span><br />
-			The girl can not be separated the boy;<br />
-			<span class="comments">// Both wind and snow all over the sky.</span><br />
-			<span class="comments">// Whether on foot or 5 kilometers.</span><br />
-			<span class="keyword">The boy</span> very <span class="keyword">happy</span>;<br />
-			<span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;<br />
-			<span class="placeholder"/><span class="comments">// Whether it is right now</span><br />
-			<span class="placeholder"/><span class="comments">// Still in the distant future.</span><br />
-			<span class="placeholder"/>The boy has but one dream;<br />
-			<span class="comments">// The boy wants the girl could well have been happy.</span><br />
-			<br>
-			<br>
-			I want to say:<br />
-			Baby, I love you forever;<br />
-		</div>
-		<div id="loveHeart">
-			<canvas id="garden"></canvas>
-			<div id="words">
-				<div id="messages">
-					�װ��ģ����������మ��һ���ʱ�⡣
-					<div id="elapseClock"></div>
-				</div>
-				<div id="loveu">
-					����ֱ������ԶԶ��<br/>
-					<div class="signature">- ������</div>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* 小灰,认识你快三个月了</span><br />
+				<span class="space"/><span class="comments">* 执此离别之际，我写了首代码送给你，以庆祝我们的相识. 希望你能够喜欢</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"小黄鸡"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"小灰"</span>);<br />
+				<span class="comments">// 2014年9月27日, 我第一次在微博上向你问好. </span><br />
+				i.like(u);<br />
+				<span class="comments">// 幸运的是，我们交换了微信，得以进一步地认识和了解</span><br />
+				u.accepted();<br />
+				<span class="comments">// 从那以后，一日不见，如隔三秋</span><br />
+				i.miss(u);<br />
+				<span class="comments">// 每次给你发信息都会字斟句琢，小心翼翼地呵护这段淡淡的感情.</span><br />
+				i.takeCareOf(u);<br />
+				<span class="comments">// 你说网络上大家都只是随便聊聊，然后就没有了然后.</span><br />
+				<span class="comments">// 但是我始终默默地等待，希望大家真的可以成为朋友.</span><br />
+				<span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
+				<span class="keyword">while</span> (isHesitate) {<br />
+				<span class="placeholder"/>i.waitFor(u);<br />
+				<span class="placeholder"/><span class="comments">// 曾经问过你喜欢什么样的男孩子 <span><br />
+				<span class="placeholder"/><span class="comments">// 你想了一下，说 “头圆” 的吧～</span><br />
+				<span class="placeholder"/>isHesitate = u.thinkOver();<br />
+				}<br />
+				<span class="comments">// 不知道在你看来，我是方是圆呢？</span><br />
+				既不回头<br />何必不忘<br />既然无缘<br />何须誓言<br />今日种种<br />似水无痕<br />明夕何夕<br />君已陌路<br />
+				再见，小灰! 洛阳亲友如相问，就说我会想念你~ 
+				i.love(u);<br />
+				i.liveHappilyWith(u);<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Anya
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						<br/>
+						<div class="signature">- Lewei</div>
+					</div>
 				</div>
 			</div>
+		
+		<div id="copyright">
+			Inspired by <a href="http://www.openrise.com/lab/FlowerPower/">FlowerPower</a> project.<br />
+			Copyright © 2015 Lewei Love Anya
 		</div>
 	</div>
-</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2013, 6, 4);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
 
-<script type="text/javascript">
-var offsetX = $("#loveHeart").width() / 2;
-var offsetY = $("#loveHeart").height() / 2 - 55;
-var together = new Date();
-together.setFullYear(2013, 2, 28);
-together.setHours(20);
-together.setMinutes(0);
-together.setSeconds(0);
-together.setMilliseconds(0);
-if (!document.createElement('canvas').getContext) {
-	var msg = document.createElement("div");
-	msg.id = "errorMsg";
-	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
-	document.body.appendChild(msg);
-	$("#code").css("display", "none")
-	$("#copyright").css("position", "absolute");
-	$("#copyright").css("bottom", "10px");
-	document.execCommand("stop");
-} else {
-	setTimeout(function () {
-		startHeartAnimation();
-	}, 5000);
-	timeElapse(together);
-	setInterval(function () {
-		timeElapse(together);
-	}, 500);
-	adjustCodePosition();
-	$("#code").typewriter();
-}
-</script>
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
 </body>
 </html>
