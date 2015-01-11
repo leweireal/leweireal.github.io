@@ -1,118 +1,106 @@
-﻿<!DOCTYPE HTML>
+﻿
+<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>送给我的小丫头</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <style type="text/css">
-        @font-face {
-            font-family: digit;
-            src: url('digital-7_mono.ttf') format("truetype");
-        }
-    </style>
-    <link href="style/default.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="style/jquery.js"></script>
-    <script type="text/javascript" src="style/garden.js"></script>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="style/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="style/jquery.js"></script>
+	<script type="text/javascript" src="style/garden.js"></script>
     <script type="text/javascript" src="style/functions.js"></script>
+    <audio id="bgmMusic" src="love.mp3" autoplay="autoplay" loop="loop" preload="auto" type="audio/mp3"></audio>
 </head>
 
 <body>
-    <div id="mainDiv">
-        <div id="content">
-            <div id="code">
-                <span class="comments">/**</span><br />
-                <span class="space"/><span class="comments">* 我的小丫头，我 们 就 这 么 在 一 起 了 , 尽 管 我 现 在 不 在 你 的 身 边</span><br />
-                <span class="space"/><span class="comments">* 我 嘴 笨 不 会 说 话 , 这 些 东 西 不 知 道 你 能 否 看 懂 .</span><br />
-                <span class="space"/><span class="comments">*/</span><br />
-                Boy i = <span class="keyword">new</span> Boy(<span class="string">"维达"</span>);<br />
-                Girl u = <span class="keyword">new</span> Girl(<span class="string">"二萌"</span>);<br />
-                <span class="comments">// 2014 年 1 月 1 号, 我 对 你 说 我 爱 你. </span><br />
-                i.love(u);<br />
-                <span class="comments">// 但是..., 你 并 没 有 明 确 回 答 我, 那 时 候 我 很 焦 虑.</span><br />
-                u.sayOtherthing();<br />
-                <span class="comments">// 那 之 后, 我 想 过 问 你 原 因.</span><br />
-                <span class="keyword">var</span> reason=i.ask(u);<br />
-                <span class="comments">// 你 说 你 还 没 有 准 备 好 开 始 一 段 新 的 感 情.</span><br />
-                $("body").append(reason);<br />
-                <span class="comments">// 可 能 你 觉 得 发 展 太 快 , 不 想 轻 易 的 改 变 我 们 之 间 的 关 系.</span><br />
-                <span class="comments">// 于 是 我 决 定 做 好 自 己 能 做 的 事 情 , 关 于 你.</span><br />
-                i.takeCareOf(u);<br />
-                <span class="comments">// 然 后 我 开 始 了 等 待 , 并 全 身 心 的 陪 着 你 , 尽 管 只 能 在 网 上.</span><br />
-                <span class="keyword">boolean</span> isAccept = <span class="keyword">false</span>;<br />
-                <span class="keyword">while</span> (isAccept) {<br />
-                <span class="placeholder"/>i.waitFor(u);<br />
-                <span class="placeholder"/><span class="comments">// 很 多 事 情 是 我 不 知 道 的 , 而 那 时 候 我 只 想 知 道 你 的 答 案</span><br />
-                <span class="placeholder"/><span class="comments">// 我 希 望 你 能 忘 了 那 些 烦 恼 忧 愁 , 让 我 跟 在 你 身 后.</span><br />
-                <span class="placeholder"/>isAccept = u.thinkOver();<br />
-                }<br />
-                <span class="comments">// 2014 年 1 月 3 号, 你 接 受 了 我 , 尽 管 那 时 候 仅 仅 是 假 装 情 侣, 像 梦 一 场.</span><br />
-				<span class="comments">// 但 是 我 知 道 , 那 不 会 是 梦。</span><br />
-                u.accept(i);<br />
-                i.liveHappilyWith(u);<br />
-            </div>
-            <div id="loveHeart">
-                <canvas id="garden"></canvas>
-                <div id="words">
-                    <div id="messages">
-                        二萌, <br>
-						永远有多远我敢你敢不敢
-						让我握紧你的手成为我另一半<br>
-						吃饭 睡觉 玩 相同的习惯
-						那就这样让我好好享受这种简单<br>
-						时间当成橡皮让我擦去你的伤
-						总有一些事因为痛苦才难忘<br>
-						记忆是我写的日记 只想给你讲
-						别再担心害怕你会是我最美的新娘<br>
-                        <div id="elapseClock" style="display:none"></div>
-                        <a href='#' id="accept">click me if believe me</a>
-                    </div>
-                    <div id="loveu">
-                        我爱你，不在嘴和QQ上，而在心里。<br/>
-                        <div class="signature">- 维达</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="copyright">
-            Just for: 二萌
-        </div>
-		<div style="display:none;">
-			<video src="love.mp3" autoplay></video>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* 小灰,认识你快三个月了</span><br />
+				<span class="space"/><span class="comments">* 执此离别之际，我写了首代码送给你，以庆祝我们的相识. 希望你能够喜欢</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"小黄鸡"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"小灰"</span>);<br />
+				<span class="comments">// 2014年9月27日, 我第一次在微博上向你问好. </span><br />
+				i.like(u);<br />
+				<span class="comments">// 幸运的是，我们交换了微信，得以进一步地认识和了解</span><br />
+				u.accepted();<br />
+				<span class="comments">// 从那以后，一日不见，如隔三秋</span><br />
+				i.miss(u);<br />
+				<span class="comments">// 每次给你发信息都会字斟句琢，小心翼翼地呵护这段淡淡的感情.</span><br />
+				i.takeCareOf(u);<br />
+				<span class="comments">// 你说网络上大家都只是随便聊聊，然后就没有了然后.</span><br />
+				<span class="comments">// 但是我始终默默地等待，希望大家真的可以成为朋友.</span><br />
+				<span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
+				<span class="keyword">while</span> (isHesitate) {<br />
+				<span class="placeholder"/>i.waitFor(u);<br />
+				<span class="placeholder"/><span class="comments">// 曾经问过你喜欢什么样的男孩子 <span><br />
+				<span class="placeholder"/><span class="comments">// 你想了一下，说 “头圆” 的吧～</span><br />
+				<span class="placeholder"/>isHesitate = u.thinkOver();<br />
+				}<br />
+				<span class="comments">// 不知道在你看来，我是方是圆呢？</span><br />
+				既不回头<br />何必不忘<br />既然无缘<br />何须誓言<br />今日种种<br />似水无痕<br />明夕何夕<br />君已陌路<br />
+				再见，小灰! 洛阳亲友如相问，就说我会想念你~ 
+				i.love(u);<br />
+				i.liveHappilyWith(u);<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						小灰, 感谢与你相识后的这些岁月
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						<br/>
+						<div class="signature">- 小黄鸡</div>
+					</div>
+				</div>
+			</div>
 		</div>
-    </div>
-    <script type="text/javascript">
-        var offsetX = $("#loveHeart").width() / 2;
-        var offsetY = $("#loveHeart").height() / 2 - 55;
-        
-        if (!document.createElement('canvas').getContext) {
-            var msg = document.createElement("div");
-            msg.id = "errorMsg";
-            msg.innerHTML = "你的浏览器不支持 HTML5!<br/>请使用 Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
-            document.body.appendChild(msg);
-            $("#code").css("display", "none")
-            $("#copyright").css("position", "absolute");
-            $("#copyright").css("bottom", "10px");
-            document.execCommand("stop");
-        } else {
-            setTimeout(function () {
-                adjustWordsPosition();
-                startHeartAnimation();
-            }, 10000);
-            
-            $("#accept").click(function(){
-				var strs = "2014-1-09 15:49:17";
-				var nowTime=new Date();
-				var together = new Date(strs.replace(/-/g,"/"));
-                $(this).hide();
-                $("#elapseClock").show();
-                timeElapse(together);
-                setInterval(function () {
-                    timeElapse(together);
-                }, 500);
-            })
-            adjustCodePosition();
-            $("#code").typewriter();
-        }
+		<div id="copyright">
+			Inspired by <a href="http://www.openrise.com/lab/FlowerPower/">FlowerPower</a> project.<br />
+			Copyright © 2011 <a href='http://wxfengyun.github.com'>wxfengyun</a> 2009-2011
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2014, 9, 27);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
 		
-    </script>
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
 </body>
 </html>
